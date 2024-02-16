@@ -64,7 +64,7 @@ var mbox = document.createElement('div');
 document.getElementById('userInput').value = '';
 
 //asynchronus request sent to backend...
-fetch('https://lsabackend.onrender.com', {method: 'POST', 
+fetch('https://lsabackend.onrender.com/send_message', {method: 'POST', 
 headers:{'Content-Type':'application/x-www-form-urlencoded'}, 
 
 body: 'message=' + encodeURIComponent(message)
