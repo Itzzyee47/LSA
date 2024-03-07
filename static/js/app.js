@@ -47,24 +47,24 @@ console.log(message);
 var chatwin = document.getElementById('chatWindow');
 var userQ = document.createElement('li');
 var mbox = document.createElement('div');
-// mbox.textContent = message;
-// var img1 = document.createElement('img');
-// var nTime = document.createElement('div');
-// nTime.innerText = currentTime();
-// nTime.classList.add('sT');
-// mbox.appendChild(nTime); 
-// img1.classList.add('im1');
-// img1.src = "../static/img/profile.png";
-// mbox.appendChild(img1);
-// mbox.classList.add('umess');
-// userQ.appendChild(mbox);
-// chatwin.appendChild(userQ);
+mbox.textContent = message;
+var img1 = document.createElement('img');
+var nTime = document.createElement('div');
+nTime.innerText = currentTime();
+nTime.classList.add('sT');
+mbox.appendChild(nTime); 
+img1.classList.add('im1');
+img1.src = "../static/img/profile.png";
+mbox.appendChild(img1);
+mbox.classList.add('umess');
+userQ.appendChild(mbox);
+chatwin.appendChild(userQ);
 
 //clear form input to show that message has been sent.....
 document.getElementById('userInput').value = '';
 
 //asynchronus request sent to backend...
-fetch('https://lsabackend.onrender.com/send_message', {method: 'POST', 
+fetch('https://itzzyee.pythonanywhere.com/send_message', {method: 'POST', 
 headers:{'Content-Type':'application/x-www-form-urlencoded'}, 
 
 body: 'message=' + encodeURIComponent(message)
@@ -73,18 +73,6 @@ body: 'message=' + encodeURIComponent(message)
     var chatwin = document.getElementById('chatWindow');
     var userQ = document.createElement('li');
     var mbox = document.createElement('div');
-    mbox.textContent = message;
-    var img1 = document.createElement('img');
-    var nTime = document.createElement('div');
-    nTime.innerText = currentTime();
-    nTime.classList.add('sT');
-    mbox.appendChild(nTime); 
-    img1.classList.add('im1');
-    img1.src = "../static/img/profile.png";
-    mbox.appendChild(img1);
-    mbox.classList.add('umess');
-    userQ.appendChild(mbox);
-    chatwin.appendChild(userQ);
 
     var resposeM = document.createElement('li');
     var bBox = document.createElement('div');
